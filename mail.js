@@ -15,7 +15,7 @@ function sendMail(from, tos, subject, msg)
     secure: true,
     port: 465,
     auth: {
-        user: 'test@latelee.org',
+        user: from,
         pass: '1qaz@WSX',
     }
     });
@@ -49,7 +49,7 @@ function main()
     require('child_process').exec('git log -1 --stat', function(err, stdout) {
         console.log('Last commit message on this branch is:\n', stdout);
         stdout = nl2br(stdout)
-        sendMail('foobar@latelee.org', args[0], 
+        sendMail('test@latelee.org', args[0], 
             args[1] + '仓库代码更新',
             '<h2>' + args[1] + '仓库代码有提交，请及时更新。</h2>地址为：<a href=\"' + args[1] + '\"target=\"_blank\">' + args[2] + '</a></br>' + '<h3>commit log:</h3>' + stdout);
     });
