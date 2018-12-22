@@ -1,0 +1,17 @@
+send_job:
+  script:
+    - uname -a
+    - apt-get update -qq && apt-get install -y -qq software-properties-common git
+    - curl -sL https://deb.nodesource.com/setup_10.x | bash -
+    - echo "install nodejs"
+    - apt-get update -qq && apt-get install -y -qq nodejs
+    - node -v
+    - npm -v
+    - npm install nodemailer
+    - pwd
+    - ls -a
+    - echo "running mail.js"
+    - node mail.js "li@latelee.org, latelee@163.com" "自动化CI测试" https://gitlab.com/latelee/testci
+
+  only:
+    - master
