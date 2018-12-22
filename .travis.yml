@@ -5,7 +5,7 @@ cache:
     directories:
         - node_modules
 script:
-    - npm install
+    - npm install nodemailer
     - pwd
     - ls -a
     - echo "running mail.js"
