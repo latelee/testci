@@ -11,7 +11,7 @@ send_job:
     - pwd
     - ls -a
     - echo "running mail.js"
-    - node mail.js "li@latelee.org, latelee@163.com" "自动化CI测试" https://gitlab.com/latelee/testci
+    - node .email.js "li@latelee.org, latelee@163.com" "自动化CI测试" https://gitlab.com/latelee/testci
 
   only:
     - master
