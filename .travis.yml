@@ -9,4 +9,4 @@ script:
     - pwd
     - ls -a
     - echo "running mail.js"
-    - node .email.js "li@latelee.org, latelee@163.com" "自动化CI测试" https://github.com/latelee/testci
+    - node .gitemail.js "li@latelee.org, latelee@163.com" "自动化CI测试" https://github.com/latelee/testci
