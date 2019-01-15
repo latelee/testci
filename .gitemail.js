@@ -1,9 +1,11 @@
 /*
+.gitemail文件
+
 npm i nodemailer
 使用：
-node mail.js 收件人，仓库名称，仓库地址
+node .gitemail文件.js 收件人，仓库名称，仓库地址
 示例：
-node .gitmail.js "li@latelee.org, latelee@163.com" "自动化CI测试" https://github.com/latelee/testci
+node .gitemail文件.js "li@latelee.org, latelee@163.com" "自动化CI测试" https://github.com/latelee/testci
 */
 const nodemailer  = require("nodemailer");
 
