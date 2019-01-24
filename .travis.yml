@@ -18,7 +18,7 @@ script:
 
 after_script:
     - echo "after script"
-    - export SSHPASS=${hostkey}
+    #- export SSHPASS=${hostkey}
     - sshpass -e ssh root@latelee.org -o StrictHostKeyChecking=no "date > /tmp/foo"
     - echo $?
 env:
