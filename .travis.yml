@@ -8,7 +8,7 @@ sudo: required
 git:
     quiet: true
 install:
-    - apt get install -y sshpass
+    - sudo apt-get install -y sshpass
 script:
     - npm install nodemailer
     - pwd
