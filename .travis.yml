@@ -4,9 +4,21 @@ cache:
     apt: true
     directories:
         - node_modules
+sudo: required
+git:
+    quiet: true
+install:
+    - apt get install -y sshpass
 script:
     - npm install nodemailer
     - pwd
     - ls -a
     - echo "running mail.js"
     - node .gitemail.js "li@latelee.org, latelee@163.com" "自动化CI测试" https://github.com/latelee/testci
+
+after_script:
+    - echo "after script"
+    - sshpass -e ssh ${hostname}@${hostname} -o StrictHostKeyChecking=no "echo date > /tmp/foo"
+env:
+    global:
+        - AUTHOR: latelee
