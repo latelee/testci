@@ -18,7 +18,8 @@ script:
 
 after_script:
     - echo "after script"
-    - sshpass -e ssh ${hostname}@${hostname} -o StrictHostKeyChecking=no "echo date > /tmp/foo"
+    - sshpass -e ssh ${hostname}@${hostname} -o StrictHostKeyChecking=no "date > /tmp/foo"
+    - echo $?
 env:
     global:
         - AUTHOR: latelee
